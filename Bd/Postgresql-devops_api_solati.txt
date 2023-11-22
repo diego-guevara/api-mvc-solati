@@ -1,0 +1,14 @@
+-- Database: devops_api_solati
+
+CREATE TABLE IF NOT EXISTS public.persona
+(
+    id SERIAL NOT NULL,
+    nombre character varying COLLATE pg_catalog."default",
+    apellido character varying COLLATE pg_catalog."default",
+    sexo character varying COLLATE pg_catalog."default",
+    direccion character varying COLLATE pg_catalog."default",
+    email character varying COLLATE pg_catalog."default",
+    celular character varying COLLATE pg_catalog."default",
+    CONSTRAINT persona_pkey PRIMARY KEY (id)
+)
+

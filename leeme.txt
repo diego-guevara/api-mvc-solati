@@ -1,0 +1,64 @@
+1. Definimos la estructura del proyecto MVC
+
+- Assets        :  css, javascript , img
+- Config        :  Archivos de configuración
+- Controllers   :  Controladores
+- Helpers       :  Archivos funciones 
+- Libraries     :  Librerias
+- Models        :  Modelos
+- Views         :  Vistas
+.htaccess       :  archivo donde establecemos permisos sobre los archivos, configuración, definimos url para navegación
+.index.php      :  archivo de inicio del proyecto
+
+
+
+ 2. Configuración de Rutas amigables en MVC con .htaccess
+
+ * Definimos la variable url(el nombre puede variar)
+
+ * Definimos rutas amigables (archivo -> index.php)
+
+ * Estructura:  url raiz / controlador / metodo / parametros
+
+
+ 3. Envio de datos a los Controladores
+
+ *  Se definen variables constantes (archivo -> Config/Config.php)
+
+ const BASE_URL = "http://localhost/proyecto/";
+ const LIBS = "Libraries/";
+ const VIEWS ="Views/";
+
+ * Requerimos el archivo con las constantes de configuración en el archivo (index.php)
+
+ * load: Creamos el autoload para cargar las clases automaticamente
+
+ * load: Creamos la comunicación con los controladores 
+
+ 
+ 4. Envio de datos a los Modelos
+
+ * Creamos el archivo (Libraries/Core/Controllers.php) para comunicar controladores y modelos
+
+ * Se crean los modelos (Models/homeModel.php)
+
+ 5. Controladores y Vistas
+
+ * Comunicamos controladores con las vistas
+
+  * Creamos el archivo (Libraries/Core/Views.php) para comunicar controladores y modelos
+  * Generamos la vista de error (Views/Error/Error.php)
+
+  * Ordenamos el codigo del index 
+     - movemos el codigo de autoload al archivo (Libraries/Core/Autoload.php)
+     - movemos el codigo de load al archivo (Libraries/Core/load.php)
+
+     y los requerimos en el archivo index.php
+
+
+ 6. Configuramos la conexion a la base de datos
+
+   * Creamos el archivo (Libraries/Core/Conexion.php)
+   * Definimos las variables de conexión en el archivo (Config/Config.php)
+   * Creamos el archivo (Libraries/Core/Mysql.php) donde se configura el CRUD
+ 
